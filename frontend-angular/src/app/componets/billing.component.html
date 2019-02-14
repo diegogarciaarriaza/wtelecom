@@ -1,0 +1,71 @@
+<div class="container">
+  <h2>Facturación</h2>
+  <form #loginForm="ngForm" (ngSubmit)="updateClient()">
+    <h3>Usuario</h3>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="nif">Contraseña</label>
+        <input type="text" class="form-control" id="nif" required [(ngModel)]="client.nif" name="nif">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="client.name" name="name">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="surname">Contraseña</label>
+        <input type="text" class="form-control" id="surname" required [(ngModel)]="client.surname" name="surname">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success">Actualizar</button>
+    <hr/>
+  </form>
+
+  <form #loginForm="ngForm" (ngSubmit)="updateBilling()">
+    <h3>Factura</h3>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="id">Número de factura</label>
+        <input type="text" class="form-control" id="id" required [(ngModel)]="billing.id" name="id">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="CUPS">CUPS</label>
+        <input type="text" class="form-control" id="CUPS" required [(ngModel)]="billing.CUPS" name="CUPS">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="kws">Kws</label>
+        <input type="text" class="form-control" id="kws" required [(ngModel)]="billing.kws" name="kws">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="amount">Importe</label>
+        <input type="text" class="form-control" id="amount" required [(ngModel)]="billing.amount" name="amount">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="issued_at">Fecha de emisión</label>
+        <input type="date" class="form-control" id="issued_at" required [(ngModel)]="billing.issued_at" name="issued_at">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="paid">Pagado</label>
+        <input type="text" class="form-control" id="paid" required [(ngModel)]="billing.paid" name="paid">
+      </div>
+
+      <div class="form-group col-md-4">
+        <label for="paid_at">Fecha de pago</label>
+        <input type="date" class="form-control" id="paid_at" required [(ngModel)]="billing.paid_at" name="paid_at">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Actualizar</button>
+
+    <hr/>
+  </form>
+
+
+
+</div>

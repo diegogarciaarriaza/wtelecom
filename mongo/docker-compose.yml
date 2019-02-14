@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+    mongodb:
+        image: mongo:latest
+        container_name: "mongodb"
+        environment:
+          - MONGO_DATA_DIR=/data/db
+          - MONGO_LOG_DIR=/dev/null
+        volumes:
+          - ./data/db:/data/db
+        ports:
+            - 27017:27017
+        command: mongod --smallfiles --logpath=/dev/null # --quiet
+        networks:
+            app_net:
+                ipv4_address: 172.25.0.75
+
+networks:
+  app_net:
+    external:
+      name: wellnessNet

@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+    mongodb:
+        image: liangsheng/nginx-vim
+        container_name: "nginx"
+        volumes:
+          - ../frontend-angular/dist/:/usr/share/nginx/html
+        ports:
+            - 80:80

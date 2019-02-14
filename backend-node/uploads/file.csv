@@ -1,0 +1,4 @@
+name, surname, nif, id_billing, CUPS, kws, amount, paid, issued_at
+Diego, Garcia Arriaza, 01234567L, AAA2, 8352418364537281726354, 9283.2, 146.82, 0, 2019-03-23
+Regino, Lobato, 75243231P, 12345678X, ATW3, 9352615243283731028372, 1238, 41.2, 1, 2019-04-30
+Ana, Fernandez Loja, 87645234L, IAUS2, 9241324354967564413237, 91.1, 1, 2019-03-23

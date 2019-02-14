@@ -1,0 +1,30 @@
+version: '3.5'
+
+services:
+  web:
+    container_name: "backend"
+    build: .
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100M"
+        max-file: "7"
+    volumes:
+    - "../backend-node:/var/www/backend"
+    ports:
+    - "5001:5001"
+    networks:
+      app_net:
+        ipv4_address: 172.25.0.2
+
+networks:
+  app_net:
+    name: "wellnessNet"
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.25.0.0/24
+      #- gateway: 172.25.0.1
